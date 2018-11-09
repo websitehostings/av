@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-12">
+    <div class="text-info font-weight-bold border border-default rounded w-100">
+      <!-- <p style="margin-left:2em;" class="mt-3">VASQI Case Summary</p> -->
+      <p class="mt-3 ml-4">VASQI Case Summary</p>
+    </div>
+  </div>
+  <div class="col-12 mt-3 border border-default rounded my-4">
+    <div class="row mx-3">
+      <!-- col-10 offset-1 -->
+      <div class="col-12 mt-2 border border-default rounded">
+        <div class="row" *ngFor="let vasqiHeaderRow of vasqiHeader">
+          <div class="col-2 offset-1">
+            <span class="float-right"><b>{{vasqiHeaderRow.key1}}</b></span>
+          </div>
+          <div class="col-2">
+            <span class="">{{vasqiHeaderRow.value1}}</span>
+          </div>
+          <div class="col-2 offset-1">
+            <span class="float-right"><b>{{vasqiHeaderRow.key2}}</b></span>
+          </div>
+          <div class="col-2 float-left">
+            <span>{{vasqiHeaderRow.value2}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mx-3 mt-2">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-2 d-flex justify-content-center border border-default my-2 ml-3 vasqiThumbnail" *ngFor="let item of vasqiAllData">
+            <div class="d-flex flex-column p-1 pt-3">
+              <div class="d-flex justify-content-center">
+                <i class="fa fa-5x" [ngClass]="item.img" aria-hidden="true"></i>
+              </div>
+              <!-- <div class="p-2 bd-highlight d-flex align-self-center"> -->
+              <div class="p-2 text-center" style="height: 64px;">
+                {{item.text}}
+              </div>
+              <div class="d-flex justify-content-center">
+                <a routerLink="/caseadmin" routerLinkActive="active">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-2 offset-1">
+        <span class="float-left">
+          <h5>Select Status:</h5>
+        </span>
+      </div>
+      <div class="col-7">
+        <mat-radio-group class="example-radio-group" [(ngModel)]="vasqistatusSelected">
+          <mat-radio-button class="mx-2" *ngFor="let vasqistatus of vasqistatusArray" [value]="season">
+            {{vasqistatus}}&nbsp;&nbsp;
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="col-12 my-3">
+        <div class="nav justify-content-end">
+          <button name="submit" type="submit" class="btn btn-success btn-lg mr-2">Submit</button>
+          <button name="submit" type="submit" class="btn btn-danger btn-lg">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>

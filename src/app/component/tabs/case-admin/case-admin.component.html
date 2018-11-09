@@ -1,0 +1,246 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body text-info font-weight-bold">
+        Case Administrative Details
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-4 pt-4 border border-default mt-4 px-4 rounded">
+  <div class="row">
+    <div class="col-12">
+      <form (ngSubmit)="save(caseAdminForm)" [formGroup]="caseAdminForm">
+
+        <fieldset>
+          <div class="row my-2">
+            <div class="col-3">
+              <div class="form-group row">
+                <label class="col-6 col-form-label text-right" for="primaryCaseNumber">Primary Case No</label>
+                <div class="col-6">
+                  <input id="primaryCaseNumber" name="primaryCaseNumber" placeholder="Case Number" type="text" class="form-control"
+                  [value]="1011"
+                    formControlName="primaryCaseNumber">
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group row">
+                <label class="col-6 col-form-label text-right" for="secondaryCaseNumber1">Secondary No</label>
+                <div class="col-6">
+                  <input id="secondaryCaseNumber1" name="secondaryCaseNumber1" placeholder="Case Number" type="text"
+                    class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group row">
+                <label class="col-6 col-form-label text-right" for="secondaryCaseNumber2">Tertiary No</label>
+                <div class="col-6">
+                  <input id="secondaryCaseNumber2" name="secondaryCaseNumber2" placeholder="Case Number" type="text"
+                    class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-group row">
+                <label for="caseDate" class="col-6 col-form-label text-right">Case Date</label>
+                <div class="col-6">
+                  <input id="caseDate" name="caseDate" placeholder="Case Date" type="date" class="form-control here">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group row">
+                <label for="caseYear" class="col-6 col-form-label text-right">Case Year</label>
+                <div class="col-6">
+                  <input id="caseYear" name="caseYear" placeholder="Case Year" type="text" class="form-control here" [disabled]="true" value="2018">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group row">
+                <label for="caseMonth" class="col-6 col-form-label text-right">Case Month</label>
+                <div class="col-6">
+                  <select id="caseMonth" name="caseMonth" class="custom-select" [disabled]="true">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11" selected="true">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group row">
+                <label for="caseQuarter" class="col-6 col-form-label text-right">Case Quarter</label>
+                <div class="col-6">
+                  <select id="caseQuarter" name="caseQuarter" class="custom-select" [disabled]="true">
+                    <option value="1">1-3</option>
+                    <option value="2">4-6</option>
+                    <option value="3">7-9</option>
+                    <option value="4">10-12</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-group">
+                <div class="row mb-2">
+                  <label for="vasqiCaseID" class="col-3 col-form-label text-right">VASQI Case ID</label>
+                  <div class="col-9">
+                    <input id="vasqiCaseID" name="vasqiCaseID" placeholder="VASQI Case ID" type="text" class="form-control here" value="A8256" [disabled]="true">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <div class="row mb-2">
+                  <label for="vasqiPatientID" class="col-3 col-form-label text-right">VASQI Patient ID</label>
+                  <div class="col-9">
+                    <input id="vasqiPatientID" name="vasqiPatientID" placeholder="VASQI Patient ID" type="text" class="form-control here" value="4256" [disabled]="true">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-info">
+              Scene Details
+            </div>
+          </div>
+          <div class="row mb-4 py-4 border border-default">
+            <!-- <div class="col-12 border-bottom border-primary mb-3">
+              <span class="">Scene Details :-</span>
+            </div> -->
+              <div class="col-3">
+                <div class="form-group row">
+                  <label for="sceneStreet" class="col-6 col-form-label text-right">Street</label>
+                  <div class="col-6">
+                    <input id="sceneStreet" name="sceneStreet" placeholder="Street" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-group row">
+                  <label for="sceneSuburb" class="col-6 col-form-label text-right">Suburb</label>
+                  <div class="col-6">
+                    <input id="sceneSuburb" name="sceneSuburb" placeholder="Suburb" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-group row">
+                  <label for="scenePostcode" class="col-6 col-form-label text-right">Post Code</label>
+                  <div class="col-6">
+                    <input id="scenePostcode" name="scenePostcode" placeholder="Postcode" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-group row">
+                  <label for="sceneRegionalClass" class="col-6 col-form-label text-right">Regional Class</label>
+                  <div class="col-6">
+                    <select id="sceneRegionalClass" name="sceneRegionalClass" class="custom-select">
+                      <option value="1">Metropolitan</option>
+                      <option value="2">Rural</option>
+                      <option value="3">Missing/Unknown</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                  <div class="form-group row">
+                    <label for="sceneLatitude" class="col-6 col-form-label text-right">Latitude</label>
+                    <div class="col-6">
+                      <input id="sceneLatitude" name="sceneLatitude" placeholder="Latitude" type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group row">
+                    <label for="sceneLongitude" class="col-6 col-form-label text-right">Longitude</label>
+                    <div class="col-6">
+                      <input id="sceneLongitude" name="sceneLongitude" placeholder="Longitude" type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group row">
+                    <label for="sceneXCoordinate" class="col-6 col-form-label text-right">X Coordinate</label>
+                    <div class="col-6">
+                      <input id="sceneXCoordinate" name="sceneXCoordinate" placeholder="X Coordinate" type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group row">
+                    <label for="sceneYCoordinate" class="col-6 col-form-label text-right">Y Coordinate</label>
+                    <div class="col-6">
+                      <input id="sceneYCoordinate" name="sceneYCoordinate" placeholder="Y Coordinate" type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>              
+            </div>          
+          <div class="form-group row">
+            <!-- <div class="offset-10 col-2"> -->
+            <div class="col-12 d-flex justify-content-start align-items-center">
+
+                <div class="d-flex flex-row bd-highlight mb-3">
+                    <div class="p-2">
+                        <div class="mr-4 text-info">
+                            Acknowledgment 
+                          </div>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <mat-radio-group class="example-radio-group">
+                            <mat-radio-button class="mx-2" *ngFor="let vasqiAcknowlegde of vasqiAcknowlegdeArray" [value]="season">
+                              {{vasqiAcknowlegde}}&nbsp;&nbsp;
+                            </mat-radio-button>
+                          </mat-radio-group>                      
+                    </div>
+                  </div>
+
+                <!-- <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="acknowledgment">
+                    <label ngbButtonLabel class="btn-primary">
+                      <input ngbButton type="radio" [value]="1"> 'Reviewed', 'Irrelevant', 'To be reviewed', 'Case Complete'
+                    </label>
+                    <label ngbButtonLabel class="btn-primary">
+                      <input ngbButton type="radio" [value]="2"> Irrelevant
+                    </label>
+                    <label ngbButtonLabel class="btn-primary">
+                      <input ngbButton type="radio" [value]="3"> To be reviewed
+                    </label>
+                    <label ngbButtonLabel class="btn-primary">
+                        <input ngbButton type="radio" [value]="4"> Case Complete 
+                      </label>                    
+                  </div> -->
+            </div>
+            <div class="col-12">
+              <div class="nav justify-content-end">
+                <button name="submit" type="submit" class="btn btn-success btn-lg mr-2">Submit</button>
+                <button name="submit" type="submit" class="btn btn-danger btn-lg">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+      </form>
+    </div>
+  </div>
+
+
+</div>

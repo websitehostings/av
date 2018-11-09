@@ -1,0 +1,80 @@
+<div class="">
+
+
+    <div class="row ">
+        <div class="col-10 offset-1 border border-primary">
+            <div class="row" *ngFor="let vasqiHeaderRow of vasqiHeader">
+                <div class="col-3 offset-1">
+                    <span class="">{{vasqiHeaderRow.key1}}</span>
+                </div>
+                <div class="col-2 text-primary">
+                    <span class="">{{vasqiHeaderRow.value1}}</span>
+                </div>
+                <div class="col-3 offset-1">
+                    <span class="">{{vasqiHeaderRow.key2}}</span>
+                </div>
+                <div class="col-2 text-primary float-left">
+                    <span>{{vasqiHeaderRow.value2}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-11 offset-1">
+            <p class="font-weight-bold">
+                Review Case Details:
+            </p>
+        </div>
+        <div class="col-11 offset-1">
+            <table class="table table-secondary">
+                <!-- <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead> -->
+                <tbody>
+                    <tr *ngFor="let vasqi of vasqiData">
+                        <td scope="row">{{vasqi.left}}</td>
+                        <td><button type="button" class="btn btn-primary">
+                                View/Edit
+                                <i class="fa fa-external-link pl-2" aria-hidden="true"></i>
+                            </button></td>
+                        <td>{{vasqi.right}}</td>
+                        <td><button type="button" class="btn btn-primary">
+                                View/Edit
+                                <i class="fa fa-external-link pl-2" aria-hidden="true"></i>
+                            </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="row">
+            <div class=" offset-1 col-1">
+                <span class=""><h5>Status:</h5></span>
+            </div>
+            <div class="col-6">
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="vasqiStatus">
+                    <label ngbButtonLabel class="btn-primary">
+                        <input ngbButton type="radio" [value]="1"> Approved
+                    </label>
+                    <label ngbButtonLabel class="btn-primary">
+                        <input ngbButton type="radio" value="middle"> Rejected
+                    </label>
+                    <label ngbButtonLabel class="btn-primary">
+                        <input ngbButton type="radio" [value]="false"> Closed
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                    <div class="nav justify-content-end">
+                            <button name="submit" type="submit" class="btn btn-success btn-lg mr-2">Submit</button>
+                            <button name="submit" type="submit" class="btn btn-danger btn-lg">Cancel</button>
+                          </div>
+            </div>
+        </div>
+</div>

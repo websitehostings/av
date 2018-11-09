@@ -1,0 +1,11 @@
+@import '../../../assets/scss/variables';
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $margin-bottom-footer; /* Set the fixed height of the footer here */
+    line-height: $margin-bottom-footer; /* Vertically center the text there */
+    background-color: $background-color-branding;
+    color: $color-branding;
+  }
